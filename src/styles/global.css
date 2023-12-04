@@ -3,7 +3,7 @@ body {
 }
 
 .section {
-  padding: 5rem 1.25rem;
+  padding: 10rem 7.5rem;
   position: relative;
 }
 
@@ -14,4 +14,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+}
+
+.collapse-plus > .collapse-title:after {
+  height: 2rem;
+  width: 1rem;
+  font-size: 30px;
 }

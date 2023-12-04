@@ -5,28 +5,55 @@ import { Icon } from "astro-icon";
 <section class='bg-white'>
   <section class='section'>
     <div class='section-container'>
-      <div class='grid grid-cols-3 gap-4'>
-        <div class='bg-red-400'>
-          <h1>FAQ</h1>
+      <div class='grid grid-cols-1 gap-x-4 md:grid-cols-12 md:gap-y-4 gap-y-4'>
+        <div class='col-span-1 md:col-span-2'>
+          <h1 class='text-3xl md:text-7xl text-a-dark uppercase leading-loose'>
+            FAQ
+          </h1>
         </div>
-        <div class='col-span-2 bg-red-400'>
-          <div class='flex space-x-14'>
-            <img class='object-cover h-60 w-60 rounded-full' />
+        <div class='col-span-1 md:col-span-1'></div>
+        <div class='col-span-1 md:col-span-8 gap-y-10'>
+          <div class='md:flex md:space-x-14 items-center'>
+            <div class='flex space-x-4 items-center'>
+              <img
+                class='object-cover md:h-24 md:w-24 w-16 h-16 rounded-full'
+                src='https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250'
+              />
 
-            <p>
-              Voici Meryem, Manager chez Arlibera. Elle vous répondra à toutes
-              vos questions.
-            </p>
+              <p class='text-xl'>
+                Voici Meryem, Manager chez Arlibera. <br />Elle répondra à
+                toutes vos questions.
+              </p>
+            </div>
             <button
-              class='bg-a-blue text-dark-a font-semibold hover:text-white py-2 px-4 border border-a-dark hover:border-transparent rounded-full flex space-x-5 items-center h-full'
+              class='bg-a-blue text-dark-a font-semibold hover:text-white py-2 px-4 border hover:border-transparent rounded-full flex space-x-5 items-center h-full'
             >
               <p>Envoyer un message</p>
 
               <Icon name='mdi:add' class='h-6' />
             </button>
           </div>
-
-          <!-- FAQ -->
+          <div class='divide-y divide-slate-700 mt-10'>
+            {
+              [
+                "Branding & Identité Visuelle",
+                "Web Design",
+                "Landing Page Design",
+                "UI/UX Design",
+                "Mobile App Design",
+              ].map((service, index) => (
+                <div class='collapse collapse-plus rounded-none ' key={index}>
+                  <input type='radio' name='my-accordion-3' />
+                  <div class='collapse-title text-xl font-medium my-4'>
+                    <p class='text-2xl font-medium'>{service}</p>
+                  </div>
+                  <div class='collapse-content '>
+                    <p class='text-xl text-normal opacity-70 my-2'>{service}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

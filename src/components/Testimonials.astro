@@ -5,21 +5,24 @@ import { Icon } from "astro-icon";
 <section class='bg-a-pink'>
   <section class='section'>
     <div class='section-container'>
-      <div class='grid grid-cols-3 gap-4'>
-        <div class='bg-red-400'>
-          <p>approuvézeq par plusieurs partenaires</p>
-          <div class='flex space-x-10'>
-            <Icon name='teenyicons:arrow-left-outline' class='h-10' />
-            <Icon name='teenyicons:arrow-right-outline' class='h-10' />
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-y-4'>
+        <div class='md:col-span-2'>
+          <p class='text-xl'>Approuvées par plusieurs partenaires</p>
+          <div class='flex space-x-10 mt-10 opacity-50'>
+            <Icon name='teenyicons:arrow-left-outline' class='h-6' />
+            <Icon name='teenyicons:arrow-right-outline' class='h-6' />
           </div>
         </div>
-        <div class='col-span-2 bg-red-400'>
-          <p class='pb-10'>
-            nous sommes sincérement reconnaissantes pour la créativité
+        <div class='md:col-span-1'></div>
+        <div class='col-span-1 md:col-span-8'>
+          <p class='text-3xl leading-relaxed font-semibold'>
+            "Nous sommes sincèrement reconnaissants pour la créativité et le
+            travail acharné de toute l'équipe Clay qui ont donné vie à notre
+            nouvelle image de marque et vision."
           </p>
 
-          <p>Rachid lwaoul</p>
-          <p>Ceo at epo</p>
+          <p class='text-xl font-bold mt-14'>Rachid Loukili</p>
+          <p class='text-lg mt-1 font-light'>Ceo at epo</p>
         </div>
       </div>
     </div>

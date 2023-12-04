@@ -1,33 +1,74 @@
-<section class='section'>
+---
+import { Icon } from "astro-icon";
+---
+
+<section class='section bg-base-200'>
   <div class='section-container'>
-    <div class='grid grid-cols-3 gap-4'>
-      <div class='bg-red-400'><p>une panoplie de serrvices numériques</p></div>
-      <div class='col-span-2 bg-red-400'>
-        <h1>notre experrtizazdazd a</h1><p>sdfsdighsd iogusdifsdbifs</p>
+    <div class='grid grid-cols-1 md:grid-cols-12'>
+      <div class='md:col-span-3'>
+        <p class='text-2xl'>Une panoplie de services numériques</p>
+      </div>
+      <div class='md:col-span-1'></div>
+      <div class='md:col-span-8'>
+        <h1 class='text-4xl
+        uppercase
+        leading-normal'>
+          Notre expertise approfondie en design et développement web garantie
+          des expériences numériques exceptionnelles
+        </h1>
       </div>
     </div>
 
-    <div class='grid grid-cols-2 gap-10'>
-      <div class='bg-gray-200'>
-        <img class='object-cover h-96 w-72 ...' />
-        <h2 class='uppercase text-2xl'>Design</h2>
-        <ul>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-10 mt-24'>
+      <div class='bg-white p-12'>
+        <img class='object-cover' src='https://placehold.co/145x180' />
+        <h2 class='uppercase text-5xl mt-24'>Design</h2>
+        <ul class='space-y-6 mt-12'>
+          {
+            [
+              "Branding & Identité Visuelle",
+              "Web Design",
+              "Landing Page Design",
+              "UI/UX Design",
+              "Mobile App Design",
+            ].map((service, index) => (
+              <li class='text-2xl flex space-x-4 items-center' key={index}>
+                <>
+                  <Icon
+                    name='emojione-monotone:diamond-suit'
+                    class=' h-4 w-4'
+                  />
+                  <p>{service}</p>
+                </>
+              </li>
+            ))
+          }
         </ul>
       </div>
-      <div class='bg-gray-200'>
-        <img class='object-cover h-96 w-72 ...' />
-        <h2 class='uppercase text-2xl'>Design</h2>
-        <ul>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
-          <li>qsdqsdsq</li>
+
+      <div class='bg-white p-12'>
+        <img class='object-cover' src='https://placehold.co/145x180' />
+        <h2 class='uppercase text-5xl mt-24'>Design</h2>
+        <ul class='space-y-6 mt-12'>
+          {
+            [
+              "Branding & Identité Visuelle",
+              "Web Design",
+              "Landing Page Design",
+              "UI/UX Design",
+              "Mobile App Design",
+            ].map((service, index) => (
+              <li class='text-2xl flex space-x-4 items-center' key={index}>
+                <>
+                  <Icon
+                    name='emojione-monotone:diamond-suit'
+                    class=' h-4 w-4'
+                  />
+                  <p>{service}</p>
+                </>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
