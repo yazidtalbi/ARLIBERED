@@ -3,7 +3,7 @@ import Ticker from "framer-motion-ticker";
 function Partners() {
   const colors = ["#632bf3", "#f122c8", "#f16022", "#9ef344", "#44d3f3"];
   return (
-    <div className='App'>
+    <div className="App">
       <Ticker duration={20}>
         {colors.map((item, index) => (
           <div

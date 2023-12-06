@@ -1,75 +1,117 @@
 ---
 import { Icon } from "astro-icon";
+
+const Design = [
+  {
+    service: "Branding & Identité Visuelle",
+    text: "Création d'identités visuelles robustes à travers l'élaboration de solutions de logo, de choix de couleurs et typographie, en assurant une cohérence de marque.",
+  },
+  {
+    service: "Web Design",
+    text: "Sites web qui captivent les utilisateurs et favorisent les conversions.",
+  },
+  {
+    service: "Mobile App Design",
+    text: "Interfaces attrayantes et faciles à utiliser pour iOS et Android.",
+  },
+  {
+    service: "UX/UI Design",
+    text: "Conception et optimisation des expériences utilisateurs.",
+  },
+  {
+    service: "Landing Page Design",
+    text: "Pages web qui transforment les visiteurs en prospects ou clients.",
+  },
+];
+const Code = [
+  {
+    service: "Développement des Sites Web",
+    text: "Création et développement de sites web intuitifs et optimisés sous les dernières technologies, garantissant ainsi des performances et une évolutivité accrues.",
+  },
+  {
+    service: "Développement d'Applications Web",
+    text: "Applications web fonctionnelles, accessibles depuis n'importe quel appareil, conçues pour automatiser divers services tels que la gestion de stock, la gestion de la clientèle, et répondre à d'autres besoins spécifiques.",
+  },
+  {
+    service: "Intégration CMS",
+    text: "Expérience de gestion de contenu fluide pour gérer efficacement le contenu de votre site web.",
+  },
+  {
+    service: "Intégration SEO",
+    text: "Optimisation de votre site web pour atteindre le sommet des classements des moteurs de recherche.",
+  },
+];
 ---
 
-<section class='section bg-base-200'>
-  <div class='section-container'>
-    <div class='grid grid-cols-1 md:grid-cols-12'>
-      <div class='md:col-span-3'>
-        <p class='text-2xl'>Une panoplie de services numériques</p>
+<section class="section bg-base-200">
+  <div class="section-container">
+    <div class="grid grid-cols-1 md:grid-cols-12">
+      <div class="md:col-span-3">
+        <p class="text-2xl">Une panoplie de services numériques</p>
       </div>
-      <div class='md:col-span-1'></div>
-      <div class='md:col-span-8'>
-        <h1 class='text-4xl
+      <div class="md:col-span-1"></div>
+      <div class="md:col-span-8">
+        <h1 class="text-4xl
         uppercase
-        leading-normal'>
+        leading-normal">
           Notre expertise approfondie en design et développement web garantie
           des expériences numériques exceptionnelles
         </h1>
       </div>
     </div>
 
-    <div class='grid grid-cols-1 md:grid-cols-2 gap-10 mt-24'>
-      <div class='bg-white p-12'>
-        <img class='object-cover' src='https://placehold.co/145x180' />
-        <h2 class='uppercase text-5xl mt-24'>Design</h2>
-        <ul class='space-y-6 mt-12'>
-          {
-            [
-              "Branding & Identité Visuelle",
-              "Web Design",
-              "Landing Page Design",
-              "UI/UX Design",
-              "Mobile App Design",
-            ].map((service, index) => (
-              <li class='text-2xl flex space-x-4 items-center' key={index}>
-                <>
-                  <Icon
-                    name='emojione-monotone:diamond-suit'
-                    class=' h-4 w-4'
-                  />
-                  <p>{service}</p>
-                </>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-24">
+      <div class="bg-white p-12">
+        <img class="object-cover" src="https://placehold.co/145x180" />
+        <h2 class="uppercase text-5xl mt-24">Design</h2>
 
-      <div class='bg-white p-12'>
-        <img class='object-cover' src='https://placehold.co/145x180' />
-        <h2 class='uppercase text-5xl mt-24'>Design</h2>
-        <ul class='space-y-6 mt-12'>
+        <p class="text-lg mt-4 mb-16 text-gray-500 leading-relaxed">
+          En accordant une priorité aux besoins des utilisateurs,, nous
+          racontons une histoire unique de votre projet en maniant des éléments
+          visuels sophistiqués.
+        </p>
+        <div class="divide-y">
           {
-            [
-              "Branding & Identité Visuelle",
-              "Web Design",
-              "Landing Page Design",
-              "UI/UX Design",
-              "Mobile App Design",
-            ].map((service, index) => (
-              <li class='text-2xl flex space-x-4 items-center' key={index}>
-                <>
-                  <Icon
-                    name='emojione-monotone:diamond-suit'
-                    class=' h-4 w-4'
-                  />
-                  <p>{service}</p>
-                </>
-              </li>
+            Design.map((item, index) => (
+              <div
+                class="collapse collapse-arrow  rounded-none"
+                checked="checked"
+              >
+                <input type="radio" name="design" />
+                <div class="collapse-title text-2xl font-bold uppercase px-0 py-6">
+                  {item.service}
+                </div>
+                <div class="collapse-content text-xl leading-relaxed text-gray-600">
+                  {item.text}
+                </div>
+              </div>
             ))
           }
-        </ul>
+        </div>
+      </div>
+      <div class="bg-white p-12">
+        <img class="object-cover" src="https://placehold.co/145x180" />
+        <h2 class="uppercase text-5xl mt-24">Code</h2>
+
+        <p class="text-lg mt-4 mb-16 text-gray-500 leading-relaxed">
+          Notre approche de développement repose sur la création d'expériences
+          numériques qui allient esthétisme et fonctionnalité.
+        </p>
+        <div class="divide-y">
+          {
+            Code.map((item, index) => (
+              <div class="collapse collapse-arrow  rounded-none">
+                <input type="radio" name={"code"} />
+                <div class="collapse-title text-2xl font-bold uppercase px-0 py-6">
+                  {item.service}
+                </div>
+                <div class="collapse-content text-xl leading-relaxed text-gray-600">
+                  {item.text}
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>
