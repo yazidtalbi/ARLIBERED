@@ -4,7 +4,13 @@ function Partners() {
   const colors = ["#632bf3", "#f122c8", "#f16022", "#9ef344", "#44d3f3"];
   return (
     <div className="App">
-      <Ticker duration={20}>
+      <Ticker duration={80}>
+        <img className="h-36" src="../../public/Sponsors.png" />
+        <img className="h-36" src="../../public/Sponsors.png" />
+        <img className="h-36" src="../../public/Sponsors.png" />
+      </Ticker>
+
+      {/* <Ticker duration={20}>
         {colors.map((item, index) => (
           <div
             key={index}
@@ -16,7 +22,7 @@ function Partners() {
             }}
           />
         ))}
-      </Ticker>
+      </Ticker> */}
     </div>
   );
 }
