@@ -1,3 +1,21 @@
-<section class='h-screen bg-a-dark'>
-  <p class='text-white'>sdfsdfsdfds</p>
+---
+import Reels from "./Reels";
+---
+
+<section class="min-h-screen bg-a-dark">
+  <div class="pt-12"></div>
+  <div class="m-14">
+    <div
+      class="bg-[url('../../public/gradient2.webp')] bg-no-repeat bg-cover overflow-hidden max-w-screen-2xl mx-auto"
+    >
+      <h1 class="text-black text-5xl uppercase p-20">
+        Une agence <br /> multidisciplinaire<br /> pour le nouveau web
+      </h1>
+
+      <div class="mt-10">
+        <Reels client:idle />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="pb-32"></div> -->
 </section>

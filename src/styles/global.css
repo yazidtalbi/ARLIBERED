@@ -21,3 +21,7 @@ body {
   width: 1rem;
   font-size: 30px;
 }
+
+.FMT__container {
+  overflow: visible !important;
+}
