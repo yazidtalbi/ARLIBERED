@@ -9,7 +9,7 @@ const faq = [
   },
   {
     question:
-      "Quelle est la tarification associée à l'engagement de vos services pour la réalisation d'un projet?",
+      "Quelle est la tarification associée pour la réalisation d'un projet?",
     answer:
       "Nous comprenons l'importance de la flexibilité du budget et du soutien à nos partenaires. Nous proposons un tarif mixte pour nos services et travaillons avec nos clients pour déterminer le niveau de support que nous pouvons fournir en fonction de leurs contraintes budgétaires.<br><br>Suite à une série d’entretiens découverte et de briefings projet, notre équipe vous recommandera le modèle le plus adapté à vos besoins. Nous créerons ensuite une proposition personnalisée, comprenant un calendrier et un coût estimé.<br><br>Notre objectif est de fournir les meilleures solutions possibles à nos partenaires, adaptées à leurs besoins spécifiques. Qu’il s’agisse d’une gamme complète de services ou d’une approche personnalisée adaptée à leurs contraintes financières, nous nous efforçons de répondre à leurs besoins uniques sans pour autant sacrifier la qualité.",
   },
@@ -46,14 +46,16 @@ const faq = [
           <div class="divide-y divide-slate-700">
             {
               faq.map((item, index) => (
-                <div class="collapse collapse-plus rounded-none " key={index}>
+                <div class="collapse collapse-plus rounded-none ">
                   <input type="radio" name="my-accordion-3" />
-                  <div class="collapse-title text-xl font-medium my-4">
-                    <p class="text-2xl font-medium">{item.question}</p>
+                  <div class="collapse-title text-xl font-medium my-4 px-0 md:pr-10 pr-14 ">
+                    <p class="text-md md:text-2xl  font-semibold ">
+                      {item.question}
+                    </p>
                   </div>
                   <div class="collapse-content ">
                     <p
-                      class="text-xl text-normal opacity-70 my-2"
+                      class="text-md md:text-xl text-normal opacity-70 my-2 md:px-2 px-0"
                       set:html={item.answer}
                     />
                   </div>
@@ -62,9 +64,9 @@ const faq = [
             }
           </div>
           <div
-            class="flex space-x-6 items-center justify-between bg-a-pink p-6 mt-14"
+            class="md:flex md:space-x-6 space-y-6 md:items-center md:justify-between block bg-a-pink p-6 mt-14"
           >
-            <div class="flex items-center gap-8">
+            <div class="block md:flex md:items-center md:gap-8 space-y-6">
               <div class="relative">
                 <img
                   class="w-16 h-16 rounded-full"
@@ -78,18 +80,19 @@ const faq = [
 
               <div class="">
                 <p class="text-lg font-semibold w-full">
-                  Voici Yazid, Consultant chez Arlibera. <br />Il répondra à
-                  toutes vos questions.
+                  Voici Yazid, Consultant chez Arlibera. <br
+                    class="hidden md:block"
+                  />Il répondra à toutes vos questions.
                 </p>
               </div>
             </div>
 
             <button
-              class="bg-a-blue text-white font-semibold text-lg hover:text-white py-2 px-6 rounded-full flex space-x-5 items-center"
+              class="bg-a-blue text-white font-semibold text-md md:text-lg hover:text-white md:py-2 py-4 px-6 rounded-full flex space-x-5 items-center"
             >
               <p>Envoyer un message</p>
 
-              <Icon name="system-uicons:arrow-right" class="h-8" />
+              <img src="/whatsapp.webp" class="h-6 w-6" />
             </button>
           </div>
         </div>

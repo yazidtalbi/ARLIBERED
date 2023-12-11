@@ -3,26 +3,41 @@ import Ticker from "framer-motion-ticker";
 function Reels() {
   const colors = ["#632bf3", "#f122c8", "#f16022", "#9ef344", "#44d3f3"];
   return (
-    <div className="App" style={{ transform: "rotate(-15deg)" }}>
+    <div className="reels">
       <Ticker duration={30}>
         <img
           className="h-full pr-8"
-          src="../../public/reels/webp/Folklore.webp"
+          src="../../reels/webp/folklore.webp"
+          alt="Festival International du Folklore - Arlibera"
         />
-        <img className="h-full pr-8" src="../../public/reels/webp/Cnss.webp" />
-        <img className="h-full pr-8" src="../../public/reels/webp/m3ak.webp" />
+        <img
+          className="h-full pr-8"
+          src="../../reels/webp/cnss.webp"
+          alt="CNSS - Caisse Nationale de Sécurité Sociale - Arlibera"
+        />
+        <img
+          className="h-full pr-8"
+          src="../../reels/webp/m3ak.webp"
+          alt="Platforme m3ak - Arlibera"
+        />
       </Ticker>
       <div className="pt-8">
         <Ticker duration={40}>
           <img
             className="h-full pr-8"
-            src="../../public/reels/webp/solomon.webp"
+            src="../../reels/webp/solomon.webp"
+            alt="Projet Solomon - Arlibera"
           />
           <img
             className="h-full pr-8"
-            src="../../public/reels/webp/zemium.webp"
+            src="../../reels/webp/zemium.webp"
+            alt="Zemium - Arlibera"
           />
-          <img className="h-full pr-8" src="../../public/reels/webp/pve.webp" />
+          <img
+            className="h-full pr-8"
+            src="../../reels/webp/pve.webp"
+            alt="Energy - Panneaux solaires - Arlibera"
+          />
         </Ticker>
       </div>
 

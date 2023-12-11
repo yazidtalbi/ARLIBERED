@@ -5,9 +5,9 @@ function Partners() {
   return (
     <div className="App">
       <Ticker duration={80}>
-        <img className="h-36" src="../../public/Sponsors.png" />
-        <img className="h-36" src="../../public/Sponsors.png" />
-        <img className="h-36" src="../../public/Sponsors.png" />
+        <img className="h-36" src="../..//Sponsors.png" />
+        <img className="h-36" src="../..//Sponsors.png" />
+        <img className="h-36" src="../..//Sponsors.png" />
       </Ticker>
 
       {/* <Ticker duration={20}>

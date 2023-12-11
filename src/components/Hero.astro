@@ -50,19 +50,47 @@ const timeMorocco = moment()
     --gradient-color-3: #dffff2;
     --gradient-color-4: #ffffff;
   }
+
+  .video {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 100px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .video {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0px;
+    }
+  }
+
+  .cta {
+    top: auto;
+    bottom: 22%;
+    right: 30%;
+    left: auto;
+  }
+
+  @media screen and (max-width: 800px) {
+    .cta {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      padding: 0px;
+      margin-top: 80px;
+    }
+  }
 </style>
 
 <section class="h-screen bg-no-repeat bg-cover">
   <canvas id="gradient-canvas" data-transition-in class="-z-10 absolute"
   ></canvas>
 
-  <div
-    class="relative max-w-screen-2xl mx-auto"
-    style="  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding:100px"
-  >
+  <div class="relative md:max-w-screen-2xl mx-auto video">
     <video
       width="100%"
       height="100%"
@@ -71,19 +99,19 @@ const timeMorocco = moment()
       muted="muted"
       playsinline="playsinline"
     >
-      <source src="../../public/Hero.webm" type="video/webm" />
+      <source src="../../Hero.webm" type="video/webm" />
     </video>
 
     <a
       href=""
+      title="Réserver un consultation - Arlibera"
       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/arlibera/30min'});return false;"
     >
       <div
-        class="parent absolute cursor-pointer z-30 flex items-center justify-center"
-        style="top: auto; bottom: 22%; right: 30%; left: auto"
+        class="parent absolute cursor-pointer z-30 flex items-center justify-center cta"
       >
         <img
-          src="../../public/consultation-arlibera-2.svg"
+          src="../../consultation-arlibera-2.svg"
           class="child h-36 z-10 rounded-full p-3 spin cursor-pointer"
           alt="Arlibera Consultation"
         />
@@ -94,17 +122,15 @@ const timeMorocco = moment()
       </div></a
     >
   </div>
-
   <div
-    class="justify-between mx-auto items-center max-w-screen md:px-20 pb-10 hidden md:flex absolute bottom-0"
+    class="justify-between items-center md:px-20 pb-10 hidden md:flex absolute bottom-0 w-full left-0 right-0"
   >
     <Icon name="ph:diamond-thin" class="h-6" />
 
     <p class="text-xl">
       <span class="font-bold" id="time-container">Agence Creative</span><br />
-
       <span class="flex items-center"
-        >basée au<img src="../../public/ma.svg" class="h-5 mx-2" /> Maroc</span
+        >basée au<img src="../../ma.svg" class="h-5 mx-2" /> Maroc</span
       >
     </p>
     <p class="text-xl">
@@ -113,7 +139,6 @@ const timeMorocco = moment()
     </p>
     <p class="text-xl">
       <span class="font-bold" id="time-container">{timeMorocco}</span><br />
-
       <span class="flex items-center"> Casablanca</span>
     </p>
 

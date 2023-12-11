@@ -44,31 +44,39 @@ const Code = [
 ---
 
 <section
-  class="section bg-[url('../../public/gradient-services.webp')] bg-no-repeat bg-cover"
+  class="section bg-[url('../../gradient-services.webp')] bg-no-repeat bg-cover"
   id="services"
 >
   <div class="section-container">
     <div class="grid grid-cols-1 md:grid-cols-12">
       <div class="md:col-span-3">
-        <p class="text-2xl mt-2">Une panoplie de services numériques</p>
+        <p class="mt-2 text-xl md:text-2xl md:mb-0 mb-10">
+          Une panoplie de services numériques
+        </p>
       </div>
       <div class="md:col-span-1"></div>
       <div class="md:col-span-8">
-        <h1 class="text-4xl
-        
-        leading-normal">
+        <h1
+          class="text-2xl font-medium md:text-4xl leading-normal md:leading-relaxed"
+        >
           Notre expertise approfondie en design et développement web garantie
           des expériences numériques exceptionnelles
         </h1>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-40">
-      <div class="bg-white p-12">
-        <img class="object-cover" src="../../public/design.png" />
-        <h2 class="uppercase text-5xl mt-24">Design</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:mt-40 mt-10">
+      <div class="bg-white p-6 md:p-12">
+        <img
+          class="object-cover h-24 md:h-32 mt-10 md:mt-0"
+          src="../../design.png"
+          alt="design"
+        />
+        <h2 class="uppercase text-3xl md:text-5xl md:mt-24 mt-10">Design</h2>
 
-        <p class="text-xl mt-8 mb-16 text-gray-500 leading-loose">
+        <p
+          class="text-md md:text-xl mt-8 mb-8 md:mb-16 text-gray-500 leading-normal md:leading-relaxed"
+        >
           En accordant une priorité aux besoins des utilisateurs, nous racontons
           une histoire unique en maniant des éléments visuels sophistiqués.
         </p>
@@ -77,10 +85,10 @@ const Code = [
             Design.map((item, index) => (
               <div class="collapse collapse-arrow  rounded-none">
                 <input type="radio" name="design" />
-                <div class="collapse-title text-2xl font-bold uppercase px-0 py-8">
+                <div class="collapse-title text-md md:text-2xl pr-10 md:pr-10 font-bold uppercase px-0 py-4 md:py-8">
                   {item.service}
                 </div>
-                <div class="collapse-content text-xl leading-relaxed text-gray-600">
+                <div class="collapse-content text-sm md:text-xl leading-relaxed text-gray-600">
                   {item.text}
                 </div>
               </div>
@@ -88,11 +96,18 @@ const Code = [
           }
         </div>
       </div>
-      <div class="bg-white p-12">
-        <img class="object-cover mt-8 -mb-8" src="../../public/code.png" />
-        <h2 class="uppercase text-5xl mt-24">Code</h2>
 
-        <p class="text-xl mt-8 mb-16 text-gray-500 leading-loose">
+      <div class="bg-white p-6 md:p-12">
+        <img
+          class="object-cover h-24 md:h-32 mt-10 md:mt-0"
+          src="../../code.png"
+          alt="code"
+        />
+        <h2 class="uppercase text-3xl md:text-5xl md:mt-24 mt-10">Code</h2>
+
+        <p
+          class="text-md md:text-xl mt-8 mb-8 md:mb-16 text-gray-500 leading-normal md:leading-relaxed"
+        >
           Notre approche de développement repose sur la création d'expériences
           numériques qui allient esthétisme et fonctionnalité.
         </p>
@@ -100,11 +115,11 @@ const Code = [
           {
             Code.map((item, index) => (
               <div class="collapse collapse-arrow  rounded-none">
-                <input type="radio" name={"code"} />
-                <div class="collapse-title text-2xl font-bold uppercase px-0 py-8">
+                <input type="radio" name="code" />
+                <div class="collapse-title text-md md:text-2xl pr-10 md:pr-4 font-bold uppercase px-0 py-4 md:py-8">
                   {item.service}
                 </div>
-                <div class="collapse-content text-xl leading-relaxed text-gray-600">
+                <div class="collapse-content text-sm md:text-xl leading-relaxed text-gray-600">
                   {item.text}
                 </div>
               </div>

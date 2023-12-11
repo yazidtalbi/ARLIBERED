@@ -24,6 +24,22 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 1200px) {
+  .section {
+    padding: 1rem 1.5rem;
+    position: relative;
+  }
+}
+.reels {
+  transform: rotate(-15deg) scale(1);
+}
+
+@media screen and (max-width: 1200px) {
+  .reels {
+    transform: rotate(-15deg) scale(0.8);
+  }
+}
+
 .section-container {
   z-index: 2;
   width: 100%;
