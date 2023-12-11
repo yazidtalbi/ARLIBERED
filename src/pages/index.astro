@@ -12,12 +12,12 @@ import Testimonials from "../components/Testimonials.astro";
 import Faq from "../components/Faq.astro";
 ---
 
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
   <body>
@@ -33,4 +33,16 @@ import Faq from "../components/Faq.astro";
       <Faq />
     </Layout>
   </body>
+  <!-- Calendly link widget begin -->
+  <link
+    href="https://assets.calendly.com/assets/external/widget.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    type="text/javascript"
+    async></script>
+  <!-- Calendly link widget end -->
+
+  <script is:inline></script>
 </html>

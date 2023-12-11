@@ -1,36 +1,40 @@
 ---
 import Partners from "./Partners";
+
+import { Icon } from "astro-icon";
 ---
 
-<section class="section bg-[url('../../)] bg-no-repeat bg-cover">
+<section
+  class="section bg-[url('../../public/BG-Agency.png')] bg-[left_top_20rem] bg-no-repeat"
+  id="agence"
+>
   <div class="section-container">
     <div class="grid grid-cols-1 md:grid-cols-12">
       <div class="md:col-span-3">
-        <p class="text-2xl">
-          Salam, nous sommes Arlibera - une agence creative Marocaine
-        </p>
+        <Icon name="ph:diamond-thin" class="h-6 mb-10 mt-2" />
+        <p class="text-2xl mr-10">Une vision qui transcende la normalité</p>
       </div>
       <div class="md:col-span-1"></div>
       <div class="md:col-span-8">
         <h1 class="text-7xl
-        uppercase
+        uppercase font-medium
         leading-tight">
           Nous sommes des penseurs créatifs et stratégiques
         </h1>
 
-        <p class="text-3xl leading-relaxed mt-24">
+        <hr class="mt-16" />
+
+        <p class="text-3xl leading-relaxed mt-16">
           Guidés par la passion de la creativité, nous accompagnons les marques
           dans l'exploration de nouveaux horizons pour créer des expériences de
           nouvelle génération. Notre fusion d'expertise en développement et en
-          design nous permet de sculpter des solutions uniques et mémorables.
+          design nous permet de sculpter des produits uniques et mémorables.
         </p>
 
         <p class="text-3xl leading-relaxed mt-12">
           Nous sommes en permanence à l'avant-garde des tendances, intégrant les
-          dernières avancées pour concevoir des solutions performantes,
-          évolutives et entièrement sur mesure. Cette approche nous permet de
-          transcender les attentes, offrant à nos clients des outils et des
-          expériences qui dépassent les normes et marquent les esprits.
+          dernières avancées pour concevoir des solutions entièrement sur
+          mesure.
         </p>
 
         <p class="text-3xl leading-relaxed mt-12">
@@ -43,6 +47,6 @@ import Partners from "./Partners";
   </div>
 </section>
 
-<div class="w-screen overflow-hidden">
+<div class="max-w-screen overflow-hidden">
   <Partners client:idle />
 </div>

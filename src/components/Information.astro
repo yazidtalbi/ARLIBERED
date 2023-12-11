@@ -21,41 +21,47 @@ import Swiper from "./Swiper.astro";
 // });
 ---
 
-<section class="bg-a-dark">
-  <div
-    class="bg-no-repeat bg-[length:45%] bg-[right_-5rem_top_14rem]"
-    style="background-image: url(../../public/Logo.webp)"
-  >
-    <div class="section">
-      <div
-        class="block md:grid grid-cols-1 md:grid-cols-12 md:space-x-10 section-container"
-      >
-        <div class="md:col-span-7 mr-10">
-          <h1
-            class="text-3xl md:text-7xl text-a-light uppercase
-        leading-tight"
-          >
-            Propulsés par l'innovation
-          </h1>
-          <p class="text-white text-3xl leading-relaxed mt-24 font-light">
-            Nous exprimons une profonde appréciation pour l'innovation qui
-            aspire à dépasser les frontières de la pensée et à ouvrir de
-            nouvelles perspectives.
-          </p><br />
-
-          <p class="text-white text-3xl leading-relaxed mt-12 font-light">
-            Chaque vision, chaque détail, chaque pixel revêt une importance
-            cruciale dans notre approche axée sur la perfection.
-          </p>
+<section class="bg-a-dark overflow-hidden">
+  <div>
+    <div class="">
+      <div class="section relative">
+        <div class="section-container">
+          <img
+            class="absolute -right-60 top-20 max-w-[700px]"
+            src="../../public/Logo.webp"
+          />
         </div>
-        <div class="md:col-span-1"></div>
-        <div class="md:col-span-4"></div>
+        <div
+          class="block md:grid grid-cols-1 md:grid-cols-12 md:space-x-10 section-container"
+        >
+          <div class="md:col-span-7 mr-10">
+            <h1
+              class="text-3xl md:text-7xl text-a-light uppercase
+        leading-tight"
+            >
+              Propulsés par l'innovation
+            </h1>
+            <p class="text-white text-3xl leading-relaxed mt-24 font-light">
+              Nous exprimons une profonde appréciation pour l'innovation qui
+              aspire à dépasser les frontières de la pensée et à ouvrir de
+              nouvelles perspectives.
+            </p><br />
+
+            <p class="text-white text-3xl leading-relaxed mt-12 font-light">
+              Chaque vision, chaque détail, chaque pixel revêt une importance
+              cruciale dans notre approche axée sur la perfection.
+            </p>
+          </div>
+          <div class="md:col-span-1"></div>
+          <div class="md:col-span-4"></div>
+        </div>
       </div>
     </div>
+
     <Swiper />
 
     <div
-      class="block md:grid grid-cols-1 md:grid-cols-12 md:space-x-10 section"
+      class="block md:grid grid-cols-1 md:grid-cols-12 md:space-x-10 py-32 section-container"
     >
       <div class="md:col-span-7">
         <p class="text-white text-3xl leading-relaxed font-light">

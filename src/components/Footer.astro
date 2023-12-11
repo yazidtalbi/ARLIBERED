@@ -5,6 +5,7 @@ import { Icon } from "astro-icon";
 <section
   class="section bg-[url('../../public/gradient.png')] bg-no-repeat bg-cover"
   style="padding:7.5rem 7.5rem 0rem"
+  id="contact"
 >
   <div class="p-4 md:p-16 m-4 md:m-0 bg-a-dark md:max-w-[75rem] md:mx-auto">
     <div
@@ -70,12 +71,22 @@ import { Icon } from "astro-icon";
         </div>
       </div>
       <div class="md:flex md:items-center md:col-span-1">
-        <form class="max-w-lg mx-auto w-full mt-10" id="contact">
+        <form
+          class="max-w-lg mx-auto w-full mt-10"
+          id="contact"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="f748300c-e4d7-4821-84e2-90a3e6d01f7d"
+          />
           <div class="relative z-0 w-full mb-5 group">
             <input
-              type="email"
-              name="floating_email"
-              id="floating_email"
+              type="text"
+              name="name"
+              id="name"
               class="block py-2.5 px-0 w-full text-xl text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-a-light peer"
               placeholder=" "
               required
@@ -90,8 +101,8 @@ import { Icon } from "astro-icon";
           <div class="relative z-0 w-full mb-5 group mt-6">
             <input
               type="email"
-              name="floating_email"
-              id="floating_email"
+              name="email"
+              id="email"
               class="block py-2.5 px-0 w-full text-xl text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-a-light peer"
               placeholder=" "
               required
@@ -105,12 +116,11 @@ import { Icon } from "astro-icon";
 
           <div class="relative z-0 w-full mb-5 group mt-14">
             <textarea
-              name="floating_email"
+              name="message"
               rows="4"
-              id="floating_email"
+              id="message"
               class="block py-2.5 px-0 w-full text-xl text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-a-light peer"
               placeholder=" "
-              col
               required></textarea>
             <label
               for="floating_email"
@@ -119,11 +129,14 @@ import { Icon } from "astro-icon";
             >
           </div>
 
+          <!-- <div class="h-captcha" data-captcha="true"></div> -->
+
           <div class="mt-8 float-right">
             <button
+              type="submit"
               class="bg-a-blue text-white font-semibold text-xl hover:text-white py-3 px-6 rounded-full flex space-x-5 items-center"
             >
-              <p>Envoyer un message</p>
+              <p>Commencer un projet</p>
 
               <Icon name="system-uicons:arrow-right" class="h-8" />
             </button>
@@ -137,3 +150,5 @@ import { Icon } from "astro-icon";
     <p>Tous Droits Réservés</p>
   </div>
 </section>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>

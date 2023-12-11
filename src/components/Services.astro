@@ -45,6 +45,7 @@ const Code = [
 
 <section
   class="section bg-[url('../../public/gradient-services.webp')] bg-no-repeat bg-cover"
+  id="services"
 >
   <div class="section-container">
     <div class="grid grid-cols-1 md:grid-cols-12">
@@ -67,7 +68,7 @@ const Code = [
         <img class="object-cover" src="../../public/design.png" />
         <h2 class="uppercase text-5xl mt-24">Design</h2>
 
-        <p class="text-xl mt-8 mb-16 text-gray-500 leading-relaxed">
+        <p class="text-xl mt-8 mb-16 text-gray-500 leading-loose">
           En accordant une priorité aux besoins des utilisateurs, nous racontons
           une histoire unique en maniant des éléments visuels sophistiqués.
         </p>
@@ -76,7 +77,7 @@ const Code = [
             Design.map((item, index) => (
               <div class="collapse collapse-arrow  rounded-none">
                 <input type="radio" name="design" />
-                <div class="collapse-title text-2xl font-bold uppercase px-0 py-6">
+                <div class="collapse-title text-2xl font-bold uppercase px-0 py-8">
                   {item.service}
                 </div>
                 <div class="collapse-content text-xl leading-relaxed text-gray-600">
@@ -91,7 +92,7 @@ const Code = [
         <img class="object-cover mt-8 -mb-8" src="../../public/code.png" />
         <h2 class="uppercase text-5xl mt-24">Code</h2>
 
-        <p class="text-xl mt-8 mb-16 text-gray-500 leading-relaxed">
+        <p class="text-xl mt-8 mb-16 text-gray-500 leading-loose">
           Notre approche de développement repose sur la création d'expériences
           numériques qui allient esthétisme et fonctionnalité.
         </p>
@@ -100,7 +101,7 @@ const Code = [
             Code.map((item, index) => (
               <div class="collapse collapse-arrow  rounded-none">
                 <input type="radio" name={"code"} />
-                <div class="collapse-title text-2xl font-bold uppercase px-0 py-6">
+                <div class="collapse-title text-2xl font-bold uppercase px-0 py-8">
                   {item.service}
                 </div>
                 <div class="collapse-content text-xl leading-relaxed text-gray-600">
