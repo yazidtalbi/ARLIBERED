@@ -10,6 +10,8 @@ import Services from "../components/Services.astro";
 import Information from "../components/Information.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Faq from "../components/Faq.astro";
+
+import { SEO } from "astro-seo";
 ---
 
 <html lang="en">
@@ -18,9 +20,46 @@ import Faq from "../components/Faq.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <SEO
+      title="Arlibera — Design & Code"
+      description="Arlibera est une agence web créative basée au Maroc spécialisée dans le Design et le Développpement Web des solutions digitales sur mesure."
+      openGraph={{
+        basic: {
+          title: "Arlibera — Design & Code",
+          type: "A type.",
+          image: "/og_image.webp",
+          url: "https://arlibera.ma",
+        },
+        optional: {
+          description:
+            "Arlibera est une agence web créative basée au Maroc spécialisée dans le Design et le Développpement Web des solutions digitales sur mesure.",
+        },
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          },
+          { name: "twitter:title", content: "Arlibera — Design & Code" },
+          {
+            name: "twitter:description",
+            content:
+              "Arlibera est une agence web créative basée au Maroc spécialisée dans le Design et le Développpement Web des solutions digitales sur mesure.",
+          },
+          {
+            name: "twitter:site",
+            content: "https://arlibera.ma",
+          },
+        ],
+      }}
+    />
   </head>
-  <body class="overflow-x-auto">
+  <body>
     <Layout>
       <Hero />
       <ShowReel />
@@ -32,17 +71,16 @@ import Faq from "../components/Faq.astro";
       <Testimonials />
       <Faq />
     </Layout>
-  </body>
-  <!-- Calendly link widget begin -->
-  <link
-    href="https://assets.calendly.com/assets/external/widget.css"
-    rel="stylesheet"
-  />
-  <script
-    src="https://assets.calendly.com/assets/external/widget.js"
-    type="text/javascript"
-    async></script>
-  <!-- Calendly link widget end -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async></script>
+    <!-- Calendly link widget end -->
 
-  <script is:inline></script>
+    <script is:inline></script>
+  </body><!-- Calendly link widget begin -->
 </html>
